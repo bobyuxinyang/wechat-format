@@ -1,4 +1,4 @@
-var lupengTheme = {
+var bobTheme = {
     BASE: {
         'text-align': 'left',
         'color': '#595959',

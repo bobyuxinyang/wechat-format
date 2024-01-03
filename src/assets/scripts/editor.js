@@ -15,23 +15,23 @@ var app = new Vue({
       editor: null,
       builtinFonts: [
         { label: '衬线', value: "Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"},
-        { label: '无衬线', value: "Roboto, Oxygen, Ubuntu, Cantarell, PingFangSC-light, PingFangTC-light, 'Open Sans', 'Helvetica Neue', sans-serif"}
+        { label: '无衬线', value: "Roboto, Oxygen, Ubuntu, Cantarell, 'PingFang SC', PingFangSC-light, PingFangTC-light,  Robot,'Open Sans', 'Helvetica Neue', sans-serif"}
       ],
-      currentFont: "Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
+      currentFont: "Roboto, Oxygen, Ubuntu, Cantarell, 'PingFang SC', PingFangSC-light, PingFangTC-light,  Robot,'Open Sans', 'Helvetica Neue', sans-serif",
       currentSize: '16px',
       sizeOption: [
         { label: '16px', value: '16px', desc: '默认' },
         { label: '17px', value: '17px', desc: '正常' },
         { label: '18px', value: '18px', desc: '稍大' }
       ],
-      currentTheme: 'default',
+      currentTheme: 'bobyuxinyang',
       themeOption: [
-        { label: 'default', value: 'default', author: 'Lyric'},
-        { label: 'lupeng', value: 'lupeng', author: '鲁鹏'}
+        { label: 'bobyuxinyang', value: 'bobyuxinyang', author: 'Bob'},
+        { label: 'default', value: 'default', author: 'Lyric'}        
       ],
       styleThemes: {
         default: defaultTheme,
-        lupeng: lupengTheme
+        bobyuxinyang: bobTheme
       },
       aboutDialogVisible: false
     }
@@ -48,7 +48,6 @@ var app = new Vue({
     this.editor.on("change", function(cm, change) {
       self.refresh()
     })
-    // this.currentFont = this.builtinFonts[0],
     this.wxRenderer = new WxRenderer({
       theme: this.styleThemes.default,
       fonts: this.currentFont,
