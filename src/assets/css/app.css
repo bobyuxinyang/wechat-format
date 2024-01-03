@@ -138,5 +138,5 @@ section {
   white-space: pre;
   display: flex;
   position: relative;
-  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  font-family: Consolas,"Droid Sans Mono","Liberation Mono",Menlo,monospace;
 }

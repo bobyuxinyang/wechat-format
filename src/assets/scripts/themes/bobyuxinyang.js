@@ -1,7 +1,7 @@
 var bobTheme = {
     BASE: {
         'text-align': 'left',
-        'color': '#595959',
+        'color': '#494949',
         'line-height': '1.55em',
         'letter-spacing': '0.06em'
     },
